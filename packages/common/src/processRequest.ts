@@ -50,7 +50,7 @@ export async function processRequest<TContext, TRootValue = {}>({
   ReadableStream,
 }: RequestProcessContext<TContext, TRootValue>): Promise<Response> {
   function getErrorResponse({
-    status = 500,
+    status = 500, // default status code
     headers,
     errors,
     isEventStream,
