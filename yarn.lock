@@ -2890,6 +2890,20 @@
   resolved "https://registry.yarnpkg.com/@envelop/disable-introspection/-/disable-introspection-3.3.1.tgz#616747a42b28172ff223a7c667a21b70a4bac66f"
   integrity sha512-THR8UnRQQB5nCLmITXvebwXwSHvFjS+ThA3RRVXpFX9EupMbTFN5a4NHty7+BYD798c3VrBZ/InbMlEWqw1c9g==
 
+"@envelop/extended-validation@^1.6.1":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@envelop/extended-validation/-/extended-validation-1.6.2.tgz#e49df67249526ffca806c83725648d9cb1c61e6b"
+  integrity sha512-Ximt65+Jr6pxqizuGW2FrOTtYs3eiFhzFwWgYzPg2xwbqOIKgAPzrNJ+DOEpsIFUBSoONEdfFUuRqoDTfPRmJQ==
+  dependencies:
+    "@graphql-tools/utils" "^8.6.1"
+
+"@envelop/generic-auth@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@envelop/generic-auth/-/generic-auth-4.2.1.tgz#436c97d5cf4cf50687ebf16ee1b9d72a22987edd"
+  integrity sha512-A/IqpjIFxOaLymY80z6lHqIXJXGUhI6sETt5UrU0sdOXIrXIm2ZVDECZhjiT7kYeZ6dQ4syvIIj1goIXLYljCQ==
+  dependencies:
+    "@envelop/extended-validation" "^1.6.1"
+
 "@envelop/graphql-jit@^3.0.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@envelop/graphql-jit/-/graphql-jit-3.1.0.tgz#8427fc72ce18038dd99bd245bb34bf108b51bd97"

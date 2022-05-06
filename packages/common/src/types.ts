@@ -40,6 +40,7 @@ export interface FormatPayloadParams<TContext, TRootValue> {
 }
 
 export interface YogaInitialContext {
+  [key: string | symbol]: unknown
   /**
    * A Document containing GraphQL Operations and Fragments to execute.
    */
@@ -73,6 +74,17 @@ export interface RequestProcessContext<TContext, TRootValue> {
   onResultProcessHooks: OnResultProcess<any>[]
 }
 
+export type CORSOptions =
+  | {
+      origin?: string[] | string
+      methods?: string[]
+      allowedHeaders?: string[]
+      exposedHeaders?: string[]
+      credentials?: boolean
+      maxAge?: number
+    }
+  | false
+
 export type GraphQLServerInject<
   TData = any,
   TVariables = Record<string, any>,
@@ -89,6 +101,8 @@ export type GraphQLServerInject<
 } & ({} extends TServerContext
   ? { serverContext?: TServerContext }
   : { serverContext: TServerContext })
+
+export { EnvelopError as GraphQLYogaError } from '@envelop/core'
 
 declare global {
   interface ReadableStream<R = any> {
